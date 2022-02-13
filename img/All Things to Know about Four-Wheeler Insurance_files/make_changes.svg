@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_make changes to policy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 27 24 27 24 0 0 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" transform="translate(-1095.000000, -68.000000)">
+            <g id="ic_email_black_24px" transform="translate(1095.000000, 68.000000)">
+                <g id="Page-1" transform="translate(14.000000, 11.000000)">
+                    <path d="M23.821255,18.4696372 C24.0595817,18.2325129 24.0595817,17.8462692 23.821255,17.6079227 L22.3912947,16.1778432 C22.1541902,15.9407189 21.7679787,15.9407189 21.5308741,16.1778432 L20.4125719,17.2962387 L22.7029527,19.5880327 L23.821255,18.4696372 Z M13,24.708206 L13,27 L15.291603,27 L22.0503042,20.2419579 L19.7587011,17.9501639 L13,24.708206 Z" id="Fill-1" fill="#E42125"></path>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-4"></g>
+                    <path d="M4.5,9.39433028 L13.5,9.39433028 L13.5,6.99445028 L4.5,6.99445028 L4.5,9.39433028 Z M4.5,14.40048 L13.5,14.40048 L13.5,12.0006 L4.5,12.0006 L4.5,14.40048 Z M4.5,19.20024 L13.5,19.20024 L13.5,16.80036 L4.5,16.80036 L4.5,19.20024 Z M15.75,0 L11.25,0 L2.25,0 C1.0125,0 0.01125,1.079946 0.01125,2.39988001 L0,21.60012 C0,22.9188541 1.00125,24 2.23875,24 L11.296125,24 C12.86775,22.3500825 15.7185,19.3142343 18,16.880756 L18,7.19964002 L18,2.39988001 C18,1.07514624 16.992,0 15.75,0 Z" id="Fill-3" fill="#E42125" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,787 @@
+*{margin: 0;
+padding: 0;
+}
+.container{
+    width: 1260px;
+    height:auto;
+    background-color:black;
+}
+body
+{
+    background: black;
+}
+header
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    transition: 0.6s;
+    padding: 10px 100px;
+    z-index: 2;
+    
+}
+header.sticky 
+{
+    padding: 10px 100px;
+    box-shadow: 1px 1px 20px 0px;
+    background-color: black;
+}
+ul
+{
+    margin-left: 250px;
+    float: left;
+    display: flex;
+}
+ul li
+{
+    list-style-type: none;
+}
+ul li a
+{
+    text-decoration: none;
+    color:rgb(182, 178, 178);
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul li a:hover
+{
+    color: white;
+}
+.drop
+{
+    width: 130px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: #000;
+    position: absolute;
+    font-weight: bolder;
+    box-shadow: 0 0 10 0 0px;
+    display: none;
+    
+}
+.drop a
+{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: rgb(160, 158, 158);
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+}
+.drop a:hover
+{
+    color: #F36D35;
+}
+.sticky .drop
+{
+    background-color: rgb(37, 37, 37);
+}
+ul li:hover .drop
+{
+    display: block;
+}
+.logo
+{
+    position: absolute;
+}
+.logo img
+{
+    width: 350px;
+    height: 350px;
+    margin-top: -120px;
+    margin-left: -90px;
+}
+ul li a #icn
+{
+    margin-right: 10px;
+}
+ul li a #icn:hover
+{
+    color: #F36D35;
+}
+.ics
+{
+    margin-left: 110px;
+    cursor: pointer;
+}
+#menu-ic-1, #menu-ic-2, #menu-ic-3, #menu-ic-4
+{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+#menu-ic-1:hover
+{
+    color: #1094F4;
+}
+#menu-ic-2:hover
+{
+    color: #FE0000;
+}
+#menu-ic-3:hover
+{
+    color:#515CCD ;
+}
+#menu-ic-4:hover    
+{
+    color: #50ABF1;
+}
+.slider{
+    width: 1260px;
+    height: 300px;
+    background-image: url(../img/peralx.jpg);
+    background-attachment: fixed;
+    margin-top: 100px;
+}
+
+.slider-img img{
+    width: 100%;
+    height: 100%;
+}
+.Free-Insurance-Coverage{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 80px;
+    font-family: "Aspira-regular", sans-serif;
+    font-size: 2.3rem;
+    color: white;
+    
+}
+.OtherInsuranceProducts{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 83px;
+    font-family: "Aspira-regular", sans-serif;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 100;
+
+}
+.YourBanknow{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 83px;
+    font-family:  sans-serif;
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 80;
+}
+/* .section{
+    width:1260px;
+    height:800px;
+    background-color:tomato;
+} */
+.Free-Insurance{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top: 50px;
+    margin-left: 80px;
+    font-weight: 120px;
+}
+.YourBanknowprovides{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    color:white;
+    margin-top: 50px;
+    margin-left: 40px;
+    font-weight: 120px;
+}
+.Product-Features{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top: 80px;
+    margin-left: 80px;
+    font-weight: 120px;
+}
+.YourInsurancelimit{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    color:white;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-weight: 120px;
+}
+.Benefits-Table{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top: 80px;
+    margin-left: 80px;
+    font-weight: 120px;
+}
+.table-section1{
+    width: 1260px;
+    height: 500px;
+    background-color:;
+}
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 700px;
+    margin-left: 80px;
+    margin-top: 40px;
+    height: 250px;
+  }
+  thead{
+      background-color: #f35d36;
+      height: 250px;
+  }
+  
+  td, th {
+    border: lightgrey;
+    text-align: left;
+    padding: 8px;
+    color: white;
+  }
+  
+  tr:nth-child(even) {
+    background-color:lightgrey;
+    color: black;
+  }
+ .Otheradditional{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top:0px;
+    margin-left: 80px;
+    font-weight: 120;
+  }
+  .Double-Indemnity{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    color:white;
+    margin-top: 140px;
+    margin-left: 80px;
+    font-weight: 100px;
+}
+.Terms{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top:80px;
+    margin-left: 80px;
+    font-weight: 120;
+    color:;
+}
+.All-existing{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    color:white;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-weight: 100px;
+
+}
+.Coverage-Matrix{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top:80px;
+    margin-left: 80px;
+    font-weight: 120;
+}
+
+.table-section2{
+    width: 1260px;
+    height: 500px;
+    background-color:;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 800px;
+    margin-left: 80px;
+    margin-top: 40px;
+    height: 250px;
+  }
+  thead{
+      background-color: #f35d36;
+      height: 50px;
+  }
+  
+  td, th {
+    border:  #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color:#e6765a;
+  }
+
+
+  .Exclusions{
+    font-family:  sans-serif;
+    font-size: 2.5rem;
+    color:#f35d36;
+    margin-top:100px;
+    margin-left: 80px;
+    font-weight: 120;
+  }
+  .No-benefit{
+    font-family:  sans-serif;
+    font-size: 1rem;
+    color:white;
+    margin-top: 40px;
+    margin-left: 80px;
+    font-weight: 100px;
+  }
+
+  #sumry
+{
+    color: white;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #F36D35;
+    margin-left: 1000px;
+    margin-top: 23px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+}
+#sumry:hover
+{
+  background-color: #ee9068;
+  color: black;
+}
+#discription
+{
+    width: 400px;
+    height: 450px;
+    background-color:black;
+    border: 3px solid #F36D35;
+    position: fixed;
+	right: -250px;
+	margin-top: 100px;
+	transition: .5s;
+    z-index: 5;
+    border-radius: 3px;
+}
+#discription h1
+{
+    font-family: 'rubik' , sans-serif;
+    color: rgb(230, 220, 220);
+    margin-left: 3px;
+}
+#discription p
+{
+    font-size: 13px;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 25px;
+    margin-top: 10px;
+    line-height: 28px;
+    color: white;
+    width: 320px;
+    
+}
+.ics
+{
+    margin-left: 110px;
+    cursor: pointer;
+}
+
+  /* footer */
+footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: absolute;
+    margin-top: 70px;
+    display: flex;
+}
+.sl1
+{
+    width: 300px;
+    height: 200px;
+    margin-left:0px;
+    margin-top: 70px;
+    background-color: black;
+    transition: 0.8s;
+}
+.sl2
+{
+    width: 300px;
+    height: 200px;
+    margin-top: 70px;
+    margin-left: -663px;
+    background-color:black;
+    transition: 0.8s;
+}
+.mybtn
+{
+    position: absolute;
+    color: #fff;
+    margin-top: 230px;
+    margin-left: 70px;
+    letter-spacing: 5px;
+    font-size: 12px;
+    transition: 1s;
+    cursor: pointer;
+}
+#mybt:hover
+{
+    color: #F36D35;
+}
+#mybt1:hover
+{
+    color: #F36D35;
+}
+.our
+{
+    position: absolute;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sl1 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.sl2 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.left-foot
+{
+    width: 983px;
+    height: 330px;
+    background-color: black;
+    margin-left: 280px;
+    position: absolute;
+}
+.left-foot h3
+{
+    color: #F36D35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+.left-foot a
+{
+    display: flex;
+    margin-left: 150px;
+    line-height: 30px;
+    text-decoration: none;
+    color: rgb(175, 168, 168);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+.account
+{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -210px;
+}
+.account #acc
+{
+    color: #F36D35;
+    margin-left: -30px;
+    margin-top: 10px;
+}
+.store
+{
+ position: absolute;
+ margin-left: 600px;
+ margin-top: -210px;
+}
+.store h3
+{
+    color: #F36D35;
+}
+.store img
+{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin-top: -80px;
+    margin-left: 80px;
+}
+.store a
+{
+    margin-top: 80px;
+}
+#st
+{
+    color: #F36D35;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 130px;
+}
+.footer-2
+{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    border-top: 1px solid #F36D35;
+    position: absolute;
+    margin-top: 350px;
+}
+.footer-2 h4
+{
+    color:rgb(138, 137, 137);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+
+/* HBL Bank Page Start */
+
+.div-main-slider
+{
+    height: 600px;
+    width: 100%;
+    /* background-color: lightgray; */
+}
+
+.div-slider
+{
+    height: 450px;
+    width: 550px;
+    margin-left: 650px;
+    margin-top: 120px;
+    /* background-color: gray; */
+    position: absolute;
+}
+.div-slider img
+{
+    height: 100%;
+    width: 100%;
+}
+.privacy-policy
+{
+    color: #F36D35;
+    font-size: 35px;
+    position: absolute;
+    margin-top: -470px;
+    margin-left: 50px;
+    font-family: sans-serif;
+}
+.this-website-is-owned
+{
+    color: white;
+    font-size: 58px;
+    position: absolute;
+    margin-top: -400px;
+    margin-left: 50px;
+    font-family: sans-serif;
+}
+.buy-habib-bank-ltd
+{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    margin-top: -190px;
+    margin-left: 50px;
+    font-family: sans-serif;
+}
+
+/* Lets try icons div */
+
+
+.div-for-icon
+{
+    height: 200px;
+    width: 1000px;
+    margin-left:40px;
+    margin-top: -40px;
+    /* background-color: lightgray; */
+}
+
+.first-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: -10px;
+    margin-top: 40px;
+    /* background-color: lightgray; */
+}
+.first-div-icon:hover
+{
+    cursor: pointer;
+}
+.first-div-icon img{
+    height: 100%;
+    width: 100%;
+}
+.second-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 193px;
+    margin-top: -200px;
+    /* background-color: lightgray; */
+
+}
+.second-div-icon:hover
+{
+    cursor: pointer;
+}
+.second-div-icon img
+{
+    height: 100%;
+    width: 100%;
+}
+.third-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 396px;
+    margin-top: -200px;
+    /* background-color: lightgray; */
+}
+.third-div-icon:hover
+{
+    cursor: pointer;
+}
+.third-div-icon img{
+    height: 100%;
+    width: 100%;
+}
+
+.fourth-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 599px;
+    margin-top: -200px;
+    /* background-color: lightgray; */
+}
+.fourth-div-icon:hover
+{
+    cursor: pointer;
+}
+.fourth-div-icon img
+{
+    height: 100%;
+    width: 100%;
+}
+.fivth-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 802px;
+    margin-top: -200px;
+    /* background-color: lightgray;    */
+}
+.fivth-div-icon:hover
+{
+    cursor: pointer;
+}
+.fivth-div-icon img
+{
+height: 100%;
+width: 100%;
+}
+.sixth-div-icon
+{
+    height: 200px;
+    width: 200px;
+    margin-left: 1005px;
+    margin-top: -200px;
+    /* background-color: lightgray;    */
+}
+.sixth-div-icon:hover
+{
+    cursor: pointer;
+}
+.sixth-div-icon img
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Lets try it */
+
+.this-website
+{
+    font-family: sans-serif;
+    color: white;
+    margin-left: 70px;
+    margin-top: 100px;
+}
+.when-you-visit
+{
+    font-family: sans-serif;
+    color: white;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.OVERVIEW
+{
+    font-family: sans-serif;
+    color:  #F36D35;
+    margin-left: 70px;
+    margin-top: 50px;
+    position: absolute;
+}
+.We-Keep-it-Smile
+{
+    color: #F36D35;
+    font-family: sans-serif;
+    font-size: 70px;
+    font-weight: 200;
+    margin-left: 380px;
+    margin-top: 70px;
+}
+.From-cultivating
+{
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+.and-services
+{
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 200;
+    margin-left: 400px;
+    margin-top: 10px;
+}
+.its-hr
+{
+    width: 500px;
+    margin-left: 395px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+/* HBL Bank Page End */

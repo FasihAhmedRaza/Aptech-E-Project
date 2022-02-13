@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_mail my policy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu" transform="translate(-970.000000, -66.000000)" fill="#E42125" fill-rule="nonzero">
+            <g id="ic_email" transform="translate(970.000000, 66.000000)">
+                <path d="M32.7,15 L14.3,15 C13.035,15 12.0115,15.98325 12.0115,17.185 L12,30.295 C12,31.49675 13.035,32.48 14.3,32.48 L32.7,32.48 C33.965,32.48 35,31.49675 35,30.295 L35,17.185 C35,15.98325 33.965,15 32.7,15 Z M33.16,19.2057143 L23.96,25.12 L14.76,19.2057143 L14.76,16.84 L23.96,22.7542857 L33.16,16.84 L33.16,19.2057143 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

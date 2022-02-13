@@ -1,0 +1,573 @@
+*
+{
+    margin: 0 auto;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth !important;
+}
+body
+{
+    background: black;
+}
+header
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    transition: 0.6s;
+    padding: 10px 100px;
+    z-index: 2;
+    
+}
+header.sticky 
+{
+    padding: 10px 100px;
+    box-shadow: 1px 1px 20px 0px;
+    background-color: black;
+}
+ul
+{
+    margin-left: 250px;
+    float: left;
+    display: flex;
+}
+ul li
+{
+    list-style-type: none;
+}
+ul li a
+{
+    text-decoration: none;
+    color:rgb(182, 178, 178);
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul li a:hover
+{
+    color: white;
+}
+.drop
+{
+    width: 130px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: #000;
+    position: absolute;
+    font-weight: bolder;
+    box-shadow: 0 0 10 0 0px;
+    display: none;
+    
+}
+.drop a
+{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: rgb(160, 158, 158);
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+}
+.drop a:hover
+{
+    color: #F36D35;
+}
+.sticky .drop
+{
+    background-color: rgb(37, 37, 37);
+}
+ul li:hover .drop
+{
+    display: block;
+}
+.logo
+{
+    position: absolute;
+}
+.logo img
+{
+    width: 350px;
+    height: 350px;
+    margin-top: -120px;
+    margin-left: -90px;
+}
+ul li a #icn
+{
+    margin-right: 10px;
+}
+ul li a #icn:hover
+{
+    color: #F36D35;
+}
+#sumry
+{
+    color: white;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #F36D35;
+    margin-left: 1000px;
+    margin-top: 23px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+}
+#sumry:hover
+{
+  background-color: #ee9068;
+  color: black;
+}
+#discription
+{
+    width: 400px;
+    height: 450px;
+    background-color:black;
+    border: 3px solid #F36D35;
+    position: fixed;
+	right: -250px;
+	margin-top: 100px;
+	transition: .5s;
+    z-index: 5;
+    border-radius: 3px;
+}
+#discription h1
+{
+    font-family: 'rubik' , sans-serif;
+    color: rgb(230, 220, 220);
+    margin-left: 3px;
+}
+#discription p
+{
+    font-size: 13px;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 25px;
+    margin-top: 10px;
+    line-height: 28px;
+    color: white;
+    width: 320px;
+    
+}
+.ics
+{
+    margin-left: 110px;
+    cursor: pointer;
+}
+#menu-ic-1, #menu-ic-2, #menu-ic-3, #menu-ic-4
+{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+#menu-ic-1:hover
+{
+    color: #1094F4;
+}
+#menu-ic-2:hover
+{
+    color: #FE0000;
+}
+#menu-ic-3:hover
+{
+    color:#515CCD ;
+}
+#menu-ic-4:hover    
+{
+    color: #50ABF1;
+}
+
+
+/*-------------------------*/
+
+/* footer */
+footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: absolute;
+    margin-top: 400px;
+    display: flex;
+}
+.sl1
+{
+    width: 300px;
+    height: 200px;
+    margin-left:0px;
+    margin-top: 70px;
+    background-color: black;
+    transition: 0.8s;
+}
+.sl2
+{
+    width: 300px;
+    height: 200px;
+    margin-top: 70px;
+    margin-left: -663px;
+    background-color:black;
+    transition: 0.8s;
+}
+.mybtn
+{
+    position: absolute;
+    color: #fff;
+    margin-top: 230px;
+    margin-left: 70px;
+    letter-spacing: 5px;
+    font-size: 12px;
+    transition: 1s;
+    cursor: pointer;
+}
+#mybt:hover
+{
+    color: #F36D35;
+}
+#mybt1:hover
+{
+    color: #F36D35;
+}
+.our
+{
+    position: absolute;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sl1 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.sl2 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.left-foot
+{
+    width: 983px;
+    height: 330px;
+    background-color: black;
+    margin-left: 280px;
+    position: absolute;
+}
+.left-foot h3
+{
+    color: #F36D35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+.left-foot a
+{
+    display: flex;
+    margin-left: 150px;
+    line-height: 30px;
+    text-decoration: none;
+    color: rgb(175, 168, 168);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+.account
+{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -210px;
+}
+.account #acc
+{
+    color: #F36D35;
+    margin-left: -30px;
+    margin-top: 10px;
+}
+.store
+{
+ position: absolute;
+ margin-left: 600px;
+ margin-top: -210px;
+}
+.store h3
+{
+    color: #F36D35;
+}
+.store img
+{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin-top: -80px;
+    margin-left: 80px;
+}
+.store a
+{
+    margin-top: 80px;
+}
+#st
+{
+    color: #F36D35;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 130px;
+}
+.footer-2
+{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    border-top: 1px solid #F36D35;
+    position: absolute;
+    margin-top: 670px;
+}
+.footer-2 h4
+{
+    color:rgb(138, 137, 137);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+
+/* MCB Bank Page Start */
+
+.div-for-slider
+{
+    width: 100%;
+    height: 600px;
+    background-color: blueviolet;
+    /* margin-top: 100px; */
+    background-image: url(../img/MCB\ Bank\ Slider.jpg);
+    background-size: 150% 100%;
+    background-attachment: fixed;
+}
+
+.Insurence-Policy
+{
+    position: absolute;
+    margin-top: 230px;
+    font-size: 75px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 300px;
+}
+.do-more-with
+{
+    position: absolute;
+    margin-top: 310px;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 303px;
+}
+.div-for-text
+{
+    height: 350px;
+    width: 100%;
+    /* background-color: rgb(139, 139, 139); */
+    margin-top: 2px;
+}
+.text
+{
+    font-family: sans-serif;
+    margin-left: 220px;
+    margin-top: 70px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+}
+.text-2
+{
+    font-family: sans-serif;
+    margin-left: 220px;
+    margin-top: 240px;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+}
+.div-for-2nd-slider
+{
+    height: 400px;
+    width: 100%;
+    background-color: violet;
+    margin-top: -120px;
+    background-image: url(../img/MCB\ Bank\ 2nd\ Slider.jpg);
+    background-size: 150% 100%;
+    background-attachment: fixed;
+
+}
+.we-are-a-good-family
+{
+    font-family: sans-serif;
+    color: white;
+    margin-left: 360px;
+    margin-top: 119px;
+    position: absolute;
+}
+.div-for-2nd-slider img
+{
+    height: 100%;
+    width: 100%;
+}
+.div-2nd-div
+{
+    height: 400px;
+    width: 100%;
+    margin-top: 70px;
+    /* background-color: lightgrey; */
+}
+.checking
+{
+    font-family: sans-serif;
+    margin-left: 217px;
+    margin-top: 50px;
+    font-size: 16px;
+    color: #F36D35;
+    position: absolute;
+}
+.an-easier
+{
+    font-family: sans-serif;
+    margin-left: 217px;
+margin-top: 70px;
+font-size: 25px;
+color: white;
+position: absolute;
+}
+.we-make-it
+{
+    font-family: sans-serif;
+    margin-left: 217px;
+    margin-top: 140px;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+}
+.div-for-pic
+{
+    height: 250px;
+    width: 350px;
+    /* background-color: violet; */
+    margin-left: 715px;
+    margin-top: 40px;
+    position: absolute;
+}
+.div-for-pic img
+{
+width: 100%;
+height: 100%;
+}
+.div-third
+{
+    height: 400px;
+    width: 100%;
+    margin-top: -50px;
+    /* background-color: lightgrey; */
+    position: absolute;
+}
+
+
+.div-third-content
+{
+    height: 250px;
+    width: 350px;
+    background-color: black;
+    margin-top: 100px;     
+    margin-left: 205px;
+}
+.div-third-content
+{
+    height: 250px;
+width:300px ;
+}
+.Cars-Lending
+{
+    color: #F36D35;
+    font-family: sans-serif;
+    font-size: 16px;
+    margin-top: -255px;
+    margin-left: 970px;
+}
+.loans-designed
+{
+    font-family: sans-serif;
+    color: white;
+    font-size: 25px;
+    margin-left: 777px;
+}
+.we-personalize
+{
+    font-family: sans-serif;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 777px;
+}
+.div-for-nothing
+{
+    height: 600px;
+    width: 100%;
+    /* background-color: #515CCD; */
+}
+.want-to-know
+{
+    font-size: 50px;
+    font-family: sans-serif;
+    color: #F36D35;
+    text-align: center;
+    margin-top: 100px;
+}
+.if-you-do
+{
+font-size: 20px;
+color: white;
+font-family: sans-serif;
+text-align: center;
+margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MCB Bank Page End */

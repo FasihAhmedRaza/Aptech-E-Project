@@ -1,0 +1,312 @@
+(function() {
+    try {
+        var a = document.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "//cdn12.lemnisk.co/smt/smthandler.php?account_id=VIZVRM5979";
+        var c = document.createElement("script");
+        c.type = "text/javascript";
+        c.async = !0;
+        c.src = "//cdn25.lemnisk.co/ssp/ApolloMunich/sw/sw_registration.js";
+        var d = document.createElement("script");
+        d.type = "text/javascript";
+        d.async = !0;
+        d.src = "//cdn25.lemnisk.co/ssp/banners/images/common/images/bfsi/ads/ads.js";
+        var b = document.getElementsByTagName("script")[0];
+        b.parentNode.insertBefore(a, b);
+        b.parentNode.insertBefore(c, b);
+        b.parentNode.insertBefore(d, b);
+        a.onload = function() {
+            try {
+                pixel.parse()
+            } catch (c) {}
+        };
+        a.onreadystatechange = function() {
+            if ("complete" == a.readyState || "loaded" == a.readyState) try {
+                pixel.parse()
+            } catch (c) {}
+        }
+    } catch (c) {}
+})();
+
+
+(function(window){
+    var bpTag = {};
+    bpTag.bpconf = [
+    {
+        cid: "5979",
+        suffixImpressionId: "BNP",
+        defaultWidth: 1310,
+        defaultHeight: 100,
+        iframeUrl: "",
+        locatorDivId: "bp_5979_DmpSlotId73",
+        isDefault: false,
+        customXhttp: null,
+        abl: "//cdn25.vzeesp.com/ssp/ApolloMunich/bp/fallback_B_73.html",
+        dl:"//cdn25.lemnisk.co/ssp/ApolloMunich/bp/fallback_73.html",
+        iid: null,
+        divId: "bp_ifrm",
+        iframeId: "bp_iframe",
+        domain: "//mu-ax.lemnisk.co/bp",
+        slotId: "73",
+        defaultRenderTimeout: 3000,
+        resizeTimer: null,
+        resizeTimeout: 50
+    },
+    ];
+    bpTag.globalConfig = {
+        suffixImpressionId : "BNP",
+        activeBp : [],
+        missingDivs : [],
+        intervalId : null
+    };
+    bpTag.getiid = function (index) {
+        var time, seed, random, impressionId;
+        var paddedData = function (data, lengthRequired) {
+            var seed = parseInt(new Date().getTime(), 16);
+
+            while (data.length < lengthRequired) {
+                data = data + ((Math.floor(Math.random() * seed)).toString(16));
+            }
+            data = data.slice(data.length - lengthRequired);
+            return data;
+        };
+
+        time = parseInt(new Date().getTime() / 1000, 10).toString(16);
+        seed = parseInt(new Date().getTime() / 1000, 16);
+        random = (Math.floor(Math.random() * seed)).toString(16);
+        time = paddedData(time, 8);
+        random = paddedData(random, 15);
+        impressionId = bpTag.bpconf[index].cid + time + random + bpTag.globalConfig.suffixImpressionId;
+        return impressionId;
+    };
+    bpTag.attachWindowEventListeners = function() {
+        var eventHandlerMap = [{
+            event: "resize",
+            handler:bpTag.handleOnResizeEvent
+        }, {
+            event: "orientationchange",
+            handler:bpTag.handleOnResizeEvent
+        }];
+        for (var index = 0; index < eventHandlerMap.length; index++) {
+            window.addEventListener(eventHandlerMap[index].event, eventHandlerMap[index].handler, false);
+        }
+    };
+    bpTag.handleOnResizeEvent = function() {
+        bpTag.globalConfig.activeBp.forEach(function(bpConfIndex, index){
+            var currentBpConf = bpTag.bpconf[bpConfIndex];
+            var newDimensions, iframeElement = document.getElementById(currentBpConf.iframeId);
+            if (iframeElement && iframeElement.contentWindow && iframeElement.contentWindow.displayItems && iframeElement.contentWindow.displayItems.getIframeDimensions ){
+                newDimensions = iframeElement.contentWindow.displayItems.getIframeDimensions(document.body.clientWidth);
+                iframeElement.setAttribute("width", newDimensions.width);
+                iframeElement.setAttribute("height", newDimensions.height);
+            } else {
+                currentBpConf.resizeTimer = setTimeout(function() {
+                    bpTag.handleOnResizeEvent();
+                }, currentBpConf.resizeTimeout);
+            }
+        });
+    };
+    bpTag.firstPartyCookie = function (cookieName) {
+        var cookieData, cookieDataArr;
+        if (!cookieName) {
+            return "";
+        }
+        cookieData = document.cookie;
+        cookieDataArr = cookieData.split(";");
+        for (var cookieD in cookieDataArr) {
+            if (cookieDataArr.hasOwnProperty(cookieD)) {
+                var cookieValuePair = cookieDataArr[cookieD].match(/\s*(.*)=(.*)/);
+                if (cookieValuePair) {
+                    if (cookieValuePair[1] === cookieName && cookieValuePair[2]) {
+                        return cookieValuePair[2];
+                    }
+                }
+            }
+        }
+        return "";
+    };
+    bpTag.constructIframeUrl = function(index) {
+        var currentBpConf = bpTag.bpconf[index];
+        currentBpConf.isDefault = false;
+        currentBpConf.iframeUrl = currentBpConf.domain + '?sid=' + currentBpConf.slotId + '&force_adv_id=VIZVRM' + currentBpConf.cid + '&rid=' + currentBpConf.iid + '&sfpc=' + bpTag.firstPartyCookie('_vz') + '&loc=' + encodeURIComponent(window.location) + '&rfr=' + encodeURIComponent(document.referrer) + bpTag.isFirstTime() +  bpTag.getUTMparams() ;
+        return;
+    };
+    bpTag.isFirstTime = function() {
+        return bpTag.firstPartyCookie('_vz') ? "" : "&ftu=1";
+    };
+    bpTag.getUTMparams = function() {
+        var regex = new RegExp('(?:\\?|&)(utm_[^=]+)=(.*?)(?=&|$)', 'gi');
+        var data = {}, matchVal;
+        while ((matchVal = regex.exec(document.URL)) != null) {
+            data[matchVal[1]] = matchVal[2] ;
+        }
+        if(Object.keys(data).length>0){
+            return "&data=" + encodeURIComponent(JSON.stringify(data)) ;
+        }
+        else {
+            return "";
+        }
+    };
+    bpTag.renderIframeContainer = function(index) {
+        var bpDiv, element;
+        var currentBpConf = bpTag.bpconf[index];
+        bpDiv = document.createElement("div");
+        bpDiv.setAttribute("id", currentBpConf.divId);
+        bpDiv.setAttribute("overflow", "hidden");
+        bpDiv.setAttribute("lineHeight", 0);
+        bpDiv.setAttribute("margin", 0);
+        bpDiv.setAttribute("padding", 0);
+        element = document.getElementById(currentBpConf.locatorDivId);
+        if ( element == null ) {
+            return null;
+        }
+        element.parentNode.appendChild(bpDiv);
+        return bpDiv;
+    };
+    bpTag.renderIframe = function(responseData,index) {
+        var bpIframe, parentContainer;
+        var currentBpConf = bpTag.bpconf[index];
+        bpIframe = document.getElementById(currentBpConf.iframeId);
+        if(!bpIframe){
+            bpIframe = document.createElement('iframe');
+            bpIframe.setAttribute('id', currentBpConf.iframeId);
+            bpIframe.setAttribute('width', currentBpConf.defaultWidth);
+            bpIframe.setAttribute('height', currentBpConf.defaultHeight);
+            bpIframe.setAttribute('scrolling', 'no');
+            bpIframe.setAttribute('marginwidth', '0');
+            bpIframe.setAttribute('marginheight', '0');
+            bpIframe.setAttribute('frameborder', '0');
+            bpIframe.setAttribute('style', 'display:block;');
+            parentContainer = document.getElementById(currentBpConf.divId);
+            if (parentContainer != null) {
+                parentContainer.appendChild(bpIframe);
+            }
+        }   
+        bpIframe.contentWindow.document.write(responseData.responseText);
+        bpIframe.contentWindow.document.close();
+        currentBpConf.resizeTimer = setTimeout(function() {
+            bpTag.handleOnResizeEvent();    
+        }, currentBpConf.resizeTimeout);
+    };
+    bpTag.renderBanner = function (index) {
+        var currentBpConf = bpTag.bpconf[index];
+        currentBpConf.iid = bpTag.getiid(index);
+        currentBpConf.divId += currentBpConf.iid;
+        currentBpConf.iframeId += currentBpConf.iid;
+        bpTag.constructIframeUrl(index);
+        bpTag.renderIframeContainer(index);
+        var bpUrl = currentBpConf.iframeUrl
+        currentBpConf.customXhttp = bpTag.ajaxRequest(bpUrl, false, index);
+    };
+    bpTag.customBanner = function (index) {
+        bpTag.renderIframe(bpTag.bpconf[index].customXhttp,index);
+    };
+    bpTag.defaultBanner = function(index) {
+        var currentBpConf = bpTag.bpconf[index];
+        if (!document.getElementById(currentBpConf.iframeId)) {
+            if (!currentBpConf.isDefault) {
+                currentBpConf.isDefault = true;
+                var a = bpTag.isAdBlockEnabled();
+                var defaultBanner = location.protocol + (bpTag.isAdBlockEnabled() ? currentBpConf.abl : currentBpConf.dl);
+                currentBpConf.customXhttp = bpTag.ajaxRequest(defaultBanner, true, index);
+            }
+        }
+    };
+    bpTag.isAdBlockEnabled = function() {
+        return !document.getElementById('tSrngBEkWlDy');
+    };
+    bpTag.checkIfBpPresent = function() {
+        bpTag.bpconf.forEach(function(bpConf, index){
+            var div = document.getElementById(bpConf.locatorDivId);
+            if (div){
+                bpTag.globalConfig.activeBp.push(index);
+                bpTag.renderBanner(index);
+            } else {
+                bpTag.globalConfig.missingDivs.push(index);
+            }
+        });
+        window.addEventListener("load", bpTag.handleMissingDivs);
+        bpTag.globalConfig.intervalId = setInterval(bpTag.handleMissingDivs, 500);
+        bpTag.attachWindowEventListeners();
+        setTimeout( function(){
+            clearInterval(bpTag.globalConfig.intervalId);
+        }, 2500);
+    };
+    bpTag.handleMissingDivs = function() {
+        var divsFound = [];
+        var missingDivs = bpTag.globalConfig.missingDivs;
+        missingDivs.forEach( function (bpConfIndex,index) {
+            var div = document.getElementById(bpTag.bpconf[bpConfIndex].locatorDivId);
+            if (div) {
+                divsFound.push(index);
+                bpTag.globalConfig.activeBp.push(bpConfIndex);
+                bpTag.renderBanner(bpConfIndex);
+            }
+        });
+        if (divsFound.length > 0) {
+            for ( var i=divsFound.length-1; i >= 0; i--) {
+                bpTag.globalConfig.missingDivs.splice(divsFound[i],1);
+            }
+        }
+    };
+    bpTag.onloadCheckBp = function() {
+        bpTag.handleMissingDivs();
+    };
+    bpTag.ajaxRequest = function (requestUrl, isDefault, index) {
+        var xhttp;
+
+        if (window.XDomainRequest) {
+            xhttp = new XDomainRequest();
+            if (xhttp) {
+                xhttp.onerror = function() {
+                    bpTag.defaultBanner(index);
+                }
+                xhttp.ontimeout = function() {
+                    bpTag.defaultBanner(index);
+                }
+                xhttp.onload = function() {
+                    bpTag.customBanner(index);
+                }
+                xhttp.timeout = bpTag.bpconf[index].defaultRenderTimeout;
+                xhttp.open("get", requestUrl);
+                xhttp.send();
+            } else {
+                if(!isDefault){
+                    bpTag.defaultBanner(index);
+                }
+            }
+        } else {
+            xhttp = new XMLHttpRequest();
+            try {
+                if(!isDefault){
+                    xhttp.withCredentials = true;
+                }
+            } catch (e) {}
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4) {
+                    if (xhttp.status == 200 && this.responseText) {
+                        clearTimeout(xHttpTimeout);
+                        bpTag.customBanner(index); 
+                    } else {
+                        if(!isDefault){
+                            bpTag.defaultBanner(index);
+                        }
+                    }
+                }
+            };
+            var xHttpTimeout = setTimeout(function() {
+                if(!isDefault){
+                    bpTag.defaultBanner(index);
+                }
+            }, bpTag.bpconf[index].defaultRenderTimeout);
+
+            xhttp.open("GET", requestUrl, true);
+            xhttp.send();
+
+        }
+        return xhttp;
+    };
+
+    bpTag.checkIfBpPresent();
+})(window)

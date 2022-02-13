@@ -1,0 +1,51 @@
+
+<!-- saved from url=(0435)https://mu-pl.lemnisk.co/analyze/analyze.php?account_id=VIZVRM5979&URL=https%3A%2F%2Fwww.hdfcergo.com%2Fblogs%2Fcar-insurance%2Fall-things-to-know-about-four-wheeler-insurance&referrer=https%3A%2F%2Fwww.google.com%2F&ts=SEO&fp34=3bf8fe58fa1e6a865375596f93164467696860f934de92794b452789f0162003&param=e700&section=1&level=1&testandtargetId=0011c58b1a304b0a993091440c660420.38_0&page=unmapped&fp11=New&device=DESKTOP&cb=viz_600fb1a4896b3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body onload="timeLoadImage();">
+		<div id="imageContainer"></div>
+	    <div id="logContainer"></div>
+		<script language="javascript" type="text/javascript">
+	  
+			var beforeLoad = Math.round((new Date()).getTime());
+			var isLoadCalled = false;
+	  		var csm = 5;
+	  		var isFP = true;
+			
+			var doLog = false;
+				
+	 		var loggerPixel = "<img src = 'https://mu-pl.lemnisk.co/analyze/log.php?account_id=VIZVRM5979&tpcns=viz_600fb1a4896b3"; // width=1 height=1 />      		
+			
+			function isCookieSet(){
+				var bool = false;
+			        var cookie=document.cookie;
+			        uid  = cookie.split('=');
+			        if(uid[1] !== undefined){ // check if the cookie is set
+			                bool = true;
+			        }
+			        return bool;
+			}
+			var varCookieSet = isCookieSet();
+			var cookiePresent = 'true';
+			var pixelContent = '';
+			var scrPixelContent = '';
+			if( varCookieSet == true || cookiePresent == "true"){
+				if( varCookieSet == true ){
+					pixelContent = '';
+					scrPixelContent = '';
+				}
+				document.getElementById("imageContainer").innerHTML = pixelContent;
+				document.write(scrPixelContent);
+			}
+
+
+			function timeLoadImage(){
+				isLoadCalled = true;
+				var afterLoad = Math.round((new Date()).getTime());
+				var finalLoadTime = (parseInt(afterLoad) - parseInt(beforeLoad))/1000;
+				if(doLog){
+					loggerPixel = loggerPixel + "&time="+finalLoadTime +"&cset="+varCookieSet+"' " + "width=1 height=1 />";
+					document.getElementById("logContainer").innerHTML = loggerPixel
+				}
+			}
+		</script>
+		
+ </body></html>

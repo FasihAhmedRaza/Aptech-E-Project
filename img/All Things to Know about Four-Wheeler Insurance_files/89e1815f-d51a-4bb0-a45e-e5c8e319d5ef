@@ -1,0 +1,81 @@
+
+(function () {
+    'use strict';
+    var trackEmails = true;
+
+    function track(url) {
+        if (document.URL.indexOf("#") > 0) {
+            var apiUrl = window.location.protocol + "//saleswingsapp.hdfcergo.com/apiPOST";
+            var xhr = new XMLHttpRequest();
+            var data = JSON.stringify({
+                "projectUUID": "89e1815f-d51a-4bb0-a45e-e5c8e319d5ef",
+                "url": url
+            });
+            xhr.open("POST", apiUrl + "?t=" + (new Date()).getTime());
+            xhr.withCredentials = true;
+            xhr.setRequestHeader("content-type", "text/json");
+            xhr.send(data);
+        } else {
+            var apiUrl = window.location.protocol + "//saleswingsapp.hdfcergo.com/api/" + encodeURI("89e1815f-d51a-4bb0-a45e-e5c8e319d5ef" + "/" + url);
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", apiUrl, true);
+            xhr.withCredentials = true;
+            xhr.setRequestHeader("content-type", "text/html");
+            xhr.send(data);
+        }
+    }
+
+    function paramToUrl(url, key, value) {
+        if (!url) return url;
+        var returnLink = "";
+        var hashPos = url.indexOf("#");
+        var paramPos = url.indexOf("?");
+        if (paramPos > -1) {
+            if (hashPos >= 0 && hashPos < paramPos) {
+                returnLink = url.substr(0, hashPos) + '?' + key + '=' + value + url.substr(hashPos, url.length);
+            } else {
+                returnLink = url.substr(0, paramPos + 1) + key + '=' + value + '&' + url.substr(paramPos + 1, url.length);
+            }
+        } else if (hashPos > -1) {
+            returnLink = url.substr(0, hashPos) + '?' + key + '=' + value + url.substr(hashPos, url.length);
+        } else {
+            returnLink = url + '?' + key + '=' + value;
+        }
+        return returnLink;
+    };
+
+    function trackForms() {
+        var inputs = document.getElementsByTagName("input"); // All Inputs
+        var regexp = /^[a-zA-Z0-9\.!#$%&*+=?^_~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+        document.addEventListener("click", function (event) {
+            trackEmail();
+        });
+        document.addEventListener("keydown", function (event) {
+            if (event.key === 'Tab') {
+                trackEmail();
+            }
+        });
+
+        function trackEmail() {
+            if (trackEmails) {
+                for (var j = 0; j < inputs.length; j++) {
+                    if (typeof inputs[j] != 'undefined' || inputs[j] != null) {
+                        var email = inputs[j].value || "";
+                        if (regexp.test(email)) {
+                            trackEmails = false;
+                            var formName = inputs[j].get;
+                            var visitedPage = paramToUrl(paramToUrl(document.URL, 'sw_form_action', 'filled_web_form'), 'id_op', email);
+                            track(visitedPage);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    track(document.URL);
+    if (true){
+        trackForms();
+    }
+
+}());

@@ -1,0 +1,825 @@
+    /* Header Start */
+
+*
+{
+    margin: 0 auto;
+    padding: 0;
+}
+
+body
+{
+    background: black;
+}
+header
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    transition: 0.6s;
+    padding: 10px 100px;
+    z-index: 2;
+    
+}
+header.sticky 
+{
+    padding: 10px 100px;
+    box-shadow: 1px 1px 20px 0px;
+    background-color: black;
+}
+ul
+{
+    margin-left: 250px;
+    float: left;
+    display: flex;
+}
+ul li
+{
+    list-style-type: none;
+}
+ul li a
+{
+    text-decoration: none;
+    color:rgb(182, 178, 178);
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ul li a:hover
+{
+    color: white;
+}
+.drop
+{
+    width: 130px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: #000;
+    position: absolute;
+    font-weight: bolder;
+    box-shadow: 0 0 10 0 0px;
+    display: none;
+    
+}
+.drop a
+{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 20px;
+    color: rgb(160, 158, 158);
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+}
+.drop a:hover
+{
+    color: #F36D35;
+}
+.sticky .drop
+{
+    background-color: rgb(37, 37, 37);
+}
+ul li:hover .drop
+{
+    display: block;
+}
+.logo
+{
+    position: absolute;
+}
+.logo img
+{
+    width: 350px;
+    height: 350px;
+    margin-top: -120px;
+    margin-left: -90px;
+}
+ul li a #icn
+{
+    margin-right: 10px;
+}
+ul li a #icn:hover
+{
+    color: #F36D35;
+}
+#sumry
+{
+    color: white;
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #F36D35;
+    margin-left: 1000px;
+    margin-top: 23px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    position: fixed;
+    z-index: 2;
+}
+#sumry:hover
+{
+  background-color: #ee9068;
+  color: black;
+}
+#discription
+{
+    width: 400px;
+    height: 450px;
+    background-color:black;
+    border: 3px solid #F36D35;
+    position: fixed;
+	right: -250px;
+	margin-top: 100px;
+	transition: .5s;
+    z-index: 5;
+    border-radius: 3px;
+}
+#discription h1
+{
+    font-family: 'rubik' , sans-serif;
+    color: rgb(230, 220, 220);
+    margin-left: 3px;
+}
+#discription p
+{
+    font-size: 13px;
+    font-weight: bolder;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 25px;
+    margin-top: 10px;
+    line-height: 28px;
+    color: white;
+    width: 320px;
+    
+}
+.ics
+{
+    margin-left: 110px;
+    cursor: pointer;
+}
+#menu-ic-1, #menu-ic-2, #menu-ic-3, #menu-ic-4
+{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+}
+#menu-ic-1:hover
+{
+    color: #1094F4;
+}
+#menu-ic-2:hover
+{
+    color: #FE0000;
+}
+#menu-ic-3:hover
+{
+    color:#515CCD ;
+}
+#menu-ic-4:hover    
+{
+    color: #50ABF1;
+}
+
+/* Header End */
+
+
+/* slider start */
+
+.four-wheel-head
+{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(14, 13, 13);
+    position: absolute;
+}
+
+.slider-four-wheel
+{
+    height: 650px;
+    position: absolute;
+    width: 100%;
+    margin-top: 100px;
+    background-image: url(../img/fourth-div-removebg-preview.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.trans
+{
+    width: 100%;
+    height: 650px;
+    background: rgb(0,0,0,0.4);
+}
+.midel
+{
+    width: 100%;
+    height: 750px;
+    background-color: black;
+    margin-top: 100px;
+    position: absolute;
+    display: flex;
+}
+.lft 
+{
+    width: 500px;
+    height: 400px;
+    border: 1px solid #F36D35;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+.rit
+{
+    width: 650px;
+    height: 400px;
+    border: 1px solid #F36D35;
+    margin-left: 4px;
+    margin-top: 50px;
+}
+.rit img
+{
+    height: 100%;
+    width: 100%;
+    transition: 1.5s;
+}
+.cover-2 img
+{
+    position: absolute;
+    width: 650px;
+    height: 399px;
+    margin-top: -404px;
+    transition: 1.5s;
+    
+
+}
+.btnn
+{
+    width: 150px;
+    height: 30px;
+    background-color: #F36D35;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 400px;
+    margin-left: 180px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.btnn2
+{
+    width: 150px;
+    height: 30px;
+    background-color: #F36D35;
+    text-align: center;
+    padding-top: 10px;
+    margin-top: 400px;
+    margin-left: 180px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+    position: absolute;
+}
+
+.lft2
+{
+    width: 500px;
+    height: 400px;
+    border: 1px solid #F36D35;
+    background-color: black;
+    margin-left: 10px;
+    margin-top: 50px;
+    position: absolute;
+}
+
+.cursor
+ {
+     position: fixed;
+     width: 35px;
+     width: 35px;
+     height: 35px;
+     border: 1px solid #F36D35;
+     border-radius: 50%;
+     left: 0;
+     top: 0;
+     pointer-events: none;
+     transform: translate(-50%, -50%);
+     transition: .1s;
+ }
+
+/* Four Wheerlers Original Page End */
+
+.get-insured
+{
+    font-family: sans-serif;
+    font-size: 70px;
+    color: black;
+    font-weight: 400;
+    margin-top: 70px;
+    margin-left: 50px;
+    position: absolute;
+}
+.p-1
+{
+ font-family: sans-serif;
+ color: white;
+ line-height: 30px;
+ margin-top: 10px;
+ margin-left: 10px;   
+}
+.p-2
+{
+ font-family: sans-serif;
+ color: white;
+ line-height: 30px;
+ margin-top: 10px;
+ margin-left: 10px;   
+}
+
+.div-for-2nd-slide
+{
+    height: 500px;
+    width: 100%;
+    /* background-color: lightseagreen; */
+    margin-top: 650px;
+    position: absolute;
+}
+
+.Car-insurance-comparison
+{
+    font-family: sans-serif;
+    color: #F36D35;
+    font-size: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.slide-2-p-1
+{
+    color: white;
+    font-family: sans-serif;
+    line-height: 35px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.side-cars
+{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    margin-left: 750px;
+    margin-top: -400px;
+}
+.side-cars img
+{
+    width: 100%;
+    transition: .3s;
+    animation: blursx 2s linear ;
+}
+.side-cars:hover img
+{
+    display: none;
+    transition: .3s;
+    
+}
+
+@keyframes blursx{
+    0%{
+        opacity: .0;
+    }
+    20%{
+        opacity: .2;
+    }
+    40%{
+        opacity: .4;
+    }
+    60%{
+        opacity: .6;
+    }
+    80%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 1;
+    }
+
+
+}
+
+.side-cars:hover
+{
+    background-image: url(../img/side-car2.jpg);
+    transition: 1s;
+    animation: blurs 2s linear infinite;
+}
+@keyframes blurs{
+    0%{
+        opacity: .0;
+    }
+    20%{
+        opacity: .2;
+    }
+    40%{
+        opacity: .4;
+    }
+    60%{
+        opacity: .6;
+    }
+    80%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 1;
+    }
+
+
+}
+.slide-3-div
+{
+    height: 500px;
+    width: 100%;
+    /* background-color: turquoise; */
+    position: absolute;
+    margin-top: 1100px;
+}
+.SCI-Insurance
+{
+    font-family: sans-serif;
+    font-size: 50px;
+    color: white;
+    margin-top: 100px;
+    margin-left: 700px;
+    color: #F36D35;
+}
+.offering-customer
+{
+    font-family: sans-serif;
+    margin-top: 20px;
+    color: rgb(187, 187, 187);
+    line-height: 30px;
+    margin-left:700px ;
+}
+.img-for-3rd-slide
+{
+    height: 430px;
+    width: 600px;
+    margin-left: 30px;
+    /* background-color: teal; */
+    position: absolute;
+    margin-top: -330px;
+    border: 2px solid #F36D35;
+}
+.img-for-3rd-slide img
+{
+    height: 100%;
+    width: 100%;
+}
+.frm-btn
+{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.frm-btn a
+{
+    text-decoration: none;
+    color: #000;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 13px;
+    
+
+}
+.frm-btn:hover
+{
+    background-color: #F36D35;
+    border: 1px solid #fff;
+    transition: 1s;
+}
+.frm-btn a:hover
+{
+    color: #fff;
+}
+.back-form
+{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.8);
+    z-index: 777777;
+    position: fixed;
+    display: none;
+}
+.from
+{
+   width: 400px;
+   height: 350px;
+   background-color: rgb(43, 39, 39);
+   margin-top: 80px;
+   border-radius: 8px;
+   border: 1px solid #F36D35;
+   
+}
+.from h1
+{
+    position: absolute;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    margin-left: 170px;
+    margin-top: 10px;
+}
+.from .fa-times
+{
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    margin-left: 370px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.from input[type="text"] ,input[type="password"]
+{
+    background-color: transparent;
+    border: 1px solid #F36D35;
+    height: 40px;
+    width: 250px;
+    margin-left: 80px;
+    margin-top: 60px;
+    border-radius: 50px;
+    color: #fff;
+
+}
+.from input[type="submit"]
+{
+    background-color: transparent;
+    width: 100px;
+    height: 40px;
+    margin-left: 150px;
+    margin-top: 30px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 50px;
+    border: 1px solid #F36D35;
+    font-size: 20px;
+    cursor: pointer;
+}
+.from input[type="submit"]:hover
+{
+   background-color: #F36D35;
+   border: 1px solid #000;
+   transition: 1s;
+}
+.finsh
+{
+
+        width: 400px;
+        height: 350px;
+        background-color: rgb(43, 39, 39);
+        margin-top: -352px;
+        border-radius: 8px;
+        margin-left: 430px;
+        position: absolute;
+        border: 1px solid #F36D35;
+        display: none;
+        cursor: pointer;
+     
+}
+.finsh p
+{
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 50px;
+    position: absolute;
+    width: 300px;
+    margin-left: 70px;
+    line-height: 50px;
+}
+.fin-btn
+{
+    width: 100px;
+    height: 35px;
+    border: 1px solid #F36D35;
+    border-radius: 50px;
+    padding-left: 50px;
+    padding-top: 10px;
+    margin-top: 270px;
+    color: #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.fin-btn:hover
+{
+    background-color: #F36D35;
+    border: 1px solid #fff;
+    transition: 1s;
+}
+/* footer */
+footer
+{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    position: absolute;
+    margin-top: 1700px;
+    display: flex;
+}
+.sl1
+{
+    width: 300px;
+    height: 200px;
+    margin-left:0px;
+    margin-top: 70px;
+    background-color: black;
+    transition: 0.8s;
+}
+.sl2
+{
+    width: 300px;
+    height: 200px;
+    margin-top: 70px;
+    margin-left: -663px;
+    background-color:black;
+    transition: 0.8s;
+}
+.mybtn
+{
+    position: absolute;
+    color: #fff;
+    margin-top: 230px;
+    margin-left: 70px;
+    letter-spacing: 5px;
+    font-size: 12px;
+    transition: 1s;
+    cursor: pointer;
+}
+#mybt:hover
+{
+    color: #F36D35;
+}
+#mybt1:hover
+{
+    color: #F36D35;
+}
+.our
+{
+    position: absolute;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sl1 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.sl2 p
+{
+    color: rgb(180, 172, 172);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 250px;
+    margin-left: 20px;
+}
+.left-foot
+{
+    width: 983px;
+    height: 330px;
+    background-color: black;
+    margin-left: 280px;
+    position: absolute;
+}
+.left-foot h3
+{
+    color: #F36D35;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px;
+}
+.left-foot a
+{
+    display: flex;
+    margin-left: 150px;
+    line-height: 30px;
+    text-decoration: none;
+    color: rgb(175, 168, 168);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   
+.account
+{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -210px;
+}
+.account #acc
+{
+    color: #F36D35;
+    margin-left: -30px;
+    margin-top: 10px;
+}
+.store
+{
+ position: absolute;
+ margin-left: 600px;
+ margin-top: -210px;
+}
+.store h3
+{
+    color: #F36D35;
+}
+.store img
+{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin-top: -80px;
+    margin-left: 80px;
+}
+.store a
+{
+    margin-top: 80px;
+}
+#st
+{
+    color: #F36D35;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 130px;
+}
+
+
+
+.footer-2
+{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    border-top: 1px solid #F36D35;
+    position: absolute;
+    margin-top:2000px;
+}
+
+
+
+.footer-2 h4
+{
+    color:rgb(138, 137, 137);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 500px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+
+
+
+/* Footer End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Four Wheerlers Original Page Start */
+
